@@ -17,7 +17,7 @@ import com.model.BoardDTO;
 public class BoardListController extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//
+		
 		BoardDAO dao = new BoardDAO();
 		ArrayList<BoardDTO> list = dao.board_list();
 				
