@@ -47,7 +47,7 @@ public class BoardDAO {
 		
 		getConn();
 		
-		String sql = "select * from board";
+		String sql = "select * from board order by b_num asc";
 		
 		try {
 			psmt = conn.prepareStatement(sql);

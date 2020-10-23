@@ -8,8 +8,8 @@
 
 	String pageNo = request.getParameter("page");
 	
-	int total = 20;
-	int count = 5;
+	int total = list.size(); //총 게시글 수
+	int count = 5;	//페이지당 게시글 수
 	
 	int start = 0;
 	
@@ -52,11 +52,11 @@
 	
 	<!-- 페이징처리 -->
 	<%
-		if(start < 5){
+		
 			for(int i=0; i<end; i++){
 				out.print("<a href='"+request.getContextPath()+"/BoardList.do?page="+(i+1)+"'>"+(i+1)+"</a> ");
 			}
-		}
+		
 		
 	%>
 	
